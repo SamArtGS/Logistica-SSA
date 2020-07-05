@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Encuesta">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:gravity="right"
+            tools:context=".ui.main.PagInicio"
+            >
+
+            <Switch
+                android:id="@+id/datosCorrectos"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Datos correctos?"
+                android:paddingBottom="10dp"
+                android:checked="true"
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CLUES"
+                />
+            <EditText
+                android:id="@+id/cluesTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1024141527424"
+                />
+            <TextView
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dirección"
+                />
+            <EditText
+                android:id="@+id/direccionTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Av. Universidad #202"
+                android:paddingBottom="20dp"
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Colonia"
+                />
+            <EditText
+                android:id="@+id/coloniaTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Framboyanes"
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ciudad"
+                />
+            <EditText
+                android:id="@+id/ciudadTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Villahermosa"
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entidad Federativa"
+                />
+            <EditText
+                android:id="@+id/entidadTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tabasco"
+                android:inputType="none"
+                />
+
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Encargado Almacen"
+                />
+            <EditText
+                android:id="@+id/encargadoTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Número telefónico"
+                />
+            <EditText
+                android:id="@+id/telefonoTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correo electrónico"
+                />
+            <EditText
+                android:id="@+id/emailTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Metros cuadrados"
+                />
+            <EditText
+                android:id="@+id/metrosCuadradosTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                />
+
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Carga de medicamentos diaria"
+                />
+            <EditText
+                android:id="@+id/cargaTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Congelador de espécies"
+                android:layout_gravity="left"/>
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Sistema de desague"
+                />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Grúas hidráulicas"
+                    android:layout_gravity="left"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="Sistema de contabilidad"
+                    />
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Servicio de gas"
+                    android:layout_gravity="left"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox6"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="Energía eléctrica"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+               >
+
+                <CheckBox
+                    android:id="@+id/checkBox7"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Internet"
+                    android:layout_gravity="left"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox8"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="Sensores de humedad"
+                    />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="35dp">
+            <CheckBox
+                android:id="@+id/checkBox9"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Cámaras de seguridad"
+                />
+            <CheckBox
+                android:id="@+id/checkBox10"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Sensores de movimiento"
+                />
+        </LinearLayout>
+
+            <Button
+
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:textColor="@android:color/background_light"
+                android:layout_gravity="center"
+                android:id="@+id/foto1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="FOTO: Fachada" />
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:srcCompat="@drawable/icons8warehouse"/>
+
+
+            <Button
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:textColor="@android:color/background_light"
+                android:layout_gravity="center"
+                android:id="@+id/foto2"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:text="FOTO: Interior" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:srcCompat="@drawable/icons8robot"/>
+
+            <Button
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:textColor="@android:color/background_light"
+                android:layout_gravity="center"
+                android:id="@+id/foto3"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="FOTO: Personal"
+
+                />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:srcCompat="@drawable/icons8people"/>
+            <Button
+                android:id="@+id/enviar"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@android:color/background_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
