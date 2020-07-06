@@ -1,6 +1,7 @@
 package com.proteco.almacenesssa.ui.main
 
 import android.Manifest
+import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.app.Activity
 import android.content.pm.PackageManager
 import android.location.Location
@@ -29,8 +30,9 @@ class Mapa : Fragment(), OnMapReadyCallback,GoogleMap.OnMarkerClickListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-    }
-    companion object {
+        ActivityCompat.requestPermissions(this.requireActivity(),
+            arrayOf(ACCESS_FINE_LOCATION)
+            ,1)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -56,7 +58,7 @@ class Mapa : Fragment(), OnMapReadyCallback,GoogleMap.OnMarkerClickListener{
 
 
 
-            mMap.mapType = GoogleMap.MAP_TYPE_NONE
+            mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
 
             googleMap.isMyLocationEnabled = true
             googleMap.uiSettings.isMyLocationButtonEnabled = true

@@ -7,12 +7,14 @@ import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
 import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.ContextMenu
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import com.google.android.gms.common.wrappers.Wrappers.packageManager
 import com.google.android.gms.maps.SupportMapFragment
@@ -35,7 +37,8 @@ class PagInicio : Fragment(),AdapterView.OnItemSelectedListener{
     //val Fragment.packageManager get() = activity?.packageManager
 
     var cluesDic = mutableMapOf<Int,String>()
-    val cluesList = mutableListOf<String>()
+    var cluesList = mutableListOf<String>()
+    var idies = mutableListOf<String>()
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
@@ -56,6 +59,7 @@ class PagInicio : Fragment(),AdapterView.OnItemSelectedListener{
             var estado = item1.getInt("$keia")
             cluesDic[estado] = clues
             cluesList.add(clues)
+            idies.add(keia.toString())
         }
         return root
     }
@@ -71,6 +75,18 @@ class PagInicio : Fragment(),AdapterView.OnItemSelectedListener{
             cluesList)
         lista_almacenes.adapter = adaptador
         lista_almacenes.onItemClickListener = listClik
+
+        edtSearch.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                adaptador.filter.filter(s)
+            }
+        })
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -96,17 +112,17 @@ class PagInicio : Fragment(),AdapterView.OnItemSelectedListener{
                                 id: Long) {
         when (parent){
             regiones ->{
-                println("Hola")
+                println("Búsqueda por regiones")
             }
             estados ->{
-                println("Adiós")
+                println("Búsqueda por estados")
             }
         }
     }
     val listClik = AdapterView.OnItemClickListener { parent, view,
                                                      position, id ->
         var itemValue:String? = lista_almacenes.getItemAtPosition(position) as? String
-        pasarEncuesta.putExtra("CLUES-SELECCIONADO",itemValue)
+        pasarEncuesta.putExtra("ID-seleccionado",itemValue)
         startActivity(pasarEncuesta)
     }
 }

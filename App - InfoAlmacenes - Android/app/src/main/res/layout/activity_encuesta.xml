@@ -39,7 +39,33 @@
                 android:id="@+id/cluesTE"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1024141527424"
+                android:text=""
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre Unidad"
+                />
+            <EditText
+                android:id="@+id/NombreUnidadTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RFC"
+                />
+            <EditText
+                android:id="@+id/rfcTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
                 />
             <TextView
                 android:textSize="20dp"
@@ -51,7 +77,7 @@
                 android:id="@+id/direccionTE"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Av. Universidad #202"
+                android:text=""
                 android:paddingBottom="20dp"
                 />
             <TextView
@@ -59,26 +85,26 @@
                 android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Colonia"
+                android:text="Localidad"
                 />
             <EditText
-                android:id="@+id/coloniaTE"
+                android:id="@+id/localidadTE"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Framboyanes"
+                android:text=""
                 />
             <TextView
                 android:paddingTop="20dp"
                 android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ciudad"
+                android:text="Municipio"
                 />
             <EditText
-                android:id="@+id/ciudadTE"
+                android:id="@+id/municipioTE"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Villahermosa"
+                android:text=""
                 />
             <TextView
                 android:paddingTop="20dp"
@@ -91,8 +117,84 @@
                 android:id="@+id/entidadTE"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tabasco"
-                android:inputType="none"
+                android:text=""
+                />
+            <TextView
+            android:paddingTop="20dp"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Código Postal"
+            />
+            <EditText
+                android:id="@+id/cpostalTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estrato"
+                />
+            <EditText
+                android:id="@+id/tipoTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha Inicio Operación"
+                />
+            <EditText
+                android:id="@+id/fechainicioTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha Último Movimiento"
+                />
+            <EditText
+                android:id="@+id/fechaultimoTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Latitud"
+                />
+            <EditText
+                android:id="@+id/latitudTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:paddingTop="20dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Longitud"
+                />
+            <EditText
+                android:id="@+id/longitudTE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 />
 
             <TextView
@@ -153,10 +255,10 @@
                 android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Carga de medicamentos diaria"
+                android:text="Número de empleados"
                 />
             <EditText
-                android:id="@+id/cargaTE"
+                android:id="@+id/numEmpleadosTE"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
