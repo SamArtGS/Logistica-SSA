@@ -11,11 +11,11 @@
         android:id="@+id/imageView"
         android:layout_width="224dp"
         android:layout_height="100dp"
-
         android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/salud"
     />
 
     <EditText
@@ -48,7 +48,8 @@
     <Button
         android:id="@+id/botonIngreso"
         android:layout_width="wrap_content"
-
+        android:backgroundTint="@android:color/holo_green_light"
+        android:textColor="@android:color/background_light"
         android:layout_height="wrap_content"
         android:layout_marginStart="228dp"
         android:layout_marginTop="20dp"
@@ -63,7 +64,8 @@
         android:id="@+id/botonOlvidoContrasena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="@android:color/background_light"
         android:layout_marginTop="88dp"
         android:text="@string/olvidoContrasena"
         app:layout_constraintEnd_toEndOf="parent"

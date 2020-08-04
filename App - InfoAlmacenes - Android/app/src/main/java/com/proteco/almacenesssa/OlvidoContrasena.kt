@@ -21,21 +21,20 @@ class OlvidoContrasena : AppCompatActivity() {
     }
     fun enviarCorreo(){
         mAuth = FirebaseAuth.getInstance()
-        if (!TextUtils.isEmpty(correoIngresa.text.toString())) {
-            mAuth!!
-                .sendPasswordResetEmail(correoIngresa.text.toString())
+        if (!TextUtils.isEmpty(correoOlvido.text.toString())) {
+            mAuth!!.sendPasswordResetEmail(correoOlvido.text.toString())
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        Toast.makeText(this, "Email Enviado", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, MainActivity::class.java)
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                        val intent = Intent(this, Ingresa::class.java)
                         startActivity(intent)
+                        Toast.makeText(this, "Email Enviado", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(this, "No se encontró el usuario con este correo", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "No se encontró el usuario con este correo",
+                            Toast.LENGTH_SHORT).show()
                     }
                 }
         } else {
-            Toast.makeText(this, "Ingrese un correo", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Ingrese un correo válido", Toast.LENGTH_SHORT).show()
         }
     }
 }

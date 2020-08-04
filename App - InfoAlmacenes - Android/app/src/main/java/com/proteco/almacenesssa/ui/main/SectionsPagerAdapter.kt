@@ -14,7 +14,6 @@ private val TAB_TITLES = arrayOf(
 )
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
-    //SABER EN QUÉ FRAGMENT ME ENCUENTRO
     override fun getItem(position: Int): Fragment {
         when (position) {
             0 -> return Agenda()
@@ -27,13 +26,9 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) : 
         }
         return PagInicio()
     }
-
-    // TÍTULOS DE LOS TABS
     override fun getPageTitle(position: Int): CharSequence? {
         return context.resources.getString(TAB_TITLES[position])
     }
-
-    // CUÁNTOS TABS
     override fun getCount(): Int {
         return 4
     }

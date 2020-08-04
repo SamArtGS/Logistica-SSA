@@ -30,7 +30,7 @@ class Registro: AppCompatActivity() {
         var progressBar = ProgressDialog(this)
         database = FirebaseDatabase.getInstance()
         auth = FirebaseAuth.getInstance()
-        databaseReference = database.reference.child("Users")
+        databaseReference = database.reference.child("Usuarios")
         var nombre:String = editText4.text.toString()
         var apellido:String = editText3.text.toString()
         var email = editText.text.toString()
@@ -42,18 +42,21 @@ class Registro: AppCompatActivity() {
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) {
                     val user: FirebaseUser = auth.currentUser!!
-                    verificarEmail(user);
-                    //val currentUserDb = databaseReference.child(user.uid)
-                    //currentUserDb.child("Nombre").setValue(nombre)
-                    //currentUserDb.child("Apellido").setValue(apellido)
+                    verificarEmail(user)
+                    val currentUserDb = databaseReference.child(user.uid)
+                    currentUserDb.child("Nombre").setValue(nombre)
+                    currentUserDb.child("Apellido").setValue(apellido)
+                    currentUserDb.child("Email").setValue(email)
+                    currentUserDb.child("Contrasena").setValue(password)
                     val intent = Intent(this, Ingresa::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                     startActivity(intent)
-//ocultamos el progress
+                    Toast.makeText(this, "Usuario registrado con éxito",
+                        Toast.LENGTH_SHORT).show()
                     progressBar.hide()
                 }.addOnFailureListener{
                     // si el registro falla se mostrará este mensaje
-                    Toast.makeText(this, "Nombre de usuario/contraseña incorrecto",
+                    Toast.makeText(this, "Error al querer registrar su usuario",
                         Toast.LENGTH_SHORT).show()
                 }
 

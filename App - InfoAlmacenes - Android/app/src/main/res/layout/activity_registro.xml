@@ -11,7 +11,7 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:text="@string/registro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:autofillHints=""
-        android:ems="14"
+        android:ems="15"
         android:hint="@string/correo"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,34 +37,25 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:autofillHints=""
-        android:ems="14"
+        android:ems="15"
         android:hint="@string/contrasena"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="182dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="28dp"
-        android:contentDescription="@string/registro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/salud" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/registro"
+        android:layout_marginTop="16dp"
+        android:text="Ingresa tus datos"
+        android:textSize="23dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText3"
@@ -72,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:autofillHints=""
-        android:ems="14"
+        android:ems="15"
         android:hint="@string/Apellido"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,13 +74,14 @@
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:autofillHints=""
-        android:ems="14"
+        android:ems="15"
         android:hint="@string/Nombre"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

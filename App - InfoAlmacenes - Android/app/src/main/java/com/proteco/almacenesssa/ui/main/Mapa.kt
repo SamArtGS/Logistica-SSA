@@ -59,11 +59,10 @@ class Mapa : Fragment(), OnMapReadyCallback,GoogleMap.OnMarkerClickListener{
 
 
             mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
-
             googleMap.isMyLocationEnabled = true
             googleMap.uiSettings.isMyLocationButtonEnabled = true
             mMap.isTrafficEnabled = true
-            mMap.uiSettings.isZoomControlsEnabled = true
+            mMap.uiSettings.isZoomControlsEnabled = false
             mMap.uiSettings.isCompassEnabled = true
             mMap.uiSettings.isRotateGesturesEnabled = true
             mMap.uiSettings.isZoomGesturesEnabled = true
@@ -71,14 +70,12 @@ class Mapa : Fragment(), OnMapReadyCallback,GoogleMap.OnMarkerClickListener{
         } else {
             Toast.makeText(this.context, "No tengo permisos de ubicación", Toast.LENGTH_LONG).show();
         }
+
         val jsonfile: String = this.context!!.assets.open("AlmacenesAndroid.json").bufferedReader().use {it.readText()}
-
         var jsonObject = JSONObject(jsonfile)
-
         var item1:JSONObject = jsonObject.getJSONObject("CLUES")
         var item2:JSONObject = jsonObject.getJSONObject("LATITUD")
         var item3:JSONObject = jsonObject.getJSONObject("LONGITUD")
-
         var keys = item1.keys()
 
 
@@ -89,14 +86,21 @@ class Mapa : Fragment(), OnMapReadyCallback,GoogleMap.OnMarkerClickListener{
             var lat = item2.getDouble("$keia")
             var log = item3.getDouble("$keia")
             when("$keia".toInt()){
-                in 1..300 -> mMap.addMarker(MarkerOptions().position(LatLng(lat, log)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)).snippet(clues).title(clues))
-                in 300..400 ->  mMap.addMarker(MarkerOptions().position(LatLng(lat, log)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)).snippet(clues).title(clues))
-                in 400..3000 ->  mMap.addMarker(MarkerOptions().position(LatLng(lat, log)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)).snippet(clues).title(clues))
-                in 3000..10000 ->  mMap.addMarker(MarkerOptions().position(LatLng(lat, log)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)).snippet(clues).title(clues))
-                in 10000..30000 ->  mMap.addMarker(MarkerOptions().position(LatLng(lat, log)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)).snippet(clues).title(clues))
-                in 30000..35000 ->  mMap.addMarker(MarkerOptions().position(LatLng(lat, log)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)).snippet(clues).title(clues))
+                in 1..300 -> mMap.addMarker(MarkerOptions().position(LatLng(lat, log))
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)).snippet(clues).title(clues))
+                in 300..400 ->  mMap.addMarker(MarkerOptions().position(LatLng(lat, log))
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)).snippet(clues).title(clues))
+                in 400..3000 ->  mMap.addMarker(MarkerOptions().position(LatLng(lat, log))
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)).snippet(clues).title(clues))
+                in 3000..10000 ->  mMap.addMarker(MarkerOptions().position(LatLng(lat, log))
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)).snippet(clues).title(clues))
+                in 10000..30000 ->  mMap.addMarker(MarkerOptions().position(LatLng(lat, log))
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)).snippet(clues).title(clues))
+                in 30000..35000 ->  mMap.addMarker(MarkerOptions().position(LatLng(lat, log))
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)).snippet(clues).title(clues))
                 else -> {
-                    mMap.addMarker(MarkerOptions().position(LatLng(lat, log)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)).snippet(clues).title(clues))
+                    mMap.addMarker(MarkerOptions().position(LatLng(lat, log))
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)).snippet(clues).title(clues))
                 }
             }
         }

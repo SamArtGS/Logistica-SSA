@@ -13,21 +13,11 @@ class Agenda : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_agenda, container, false)
     }
-
-    companion object {
-        fun newInstance() =
-            Agenda().apply {
-
-            }
-    }
-
-
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: RecyclerView.Adapter<*>

@@ -13,6 +13,16 @@
         <item>REGIÓN 9</item>
         <item>REGIÓN 10</item>
     </string-array>
+
+    <string-array name="EstratoNom">
+        <item>RURAL</item>
+        <item>URBANO</item>
+    </string-array>
+    <string-array name="Subrogada">
+        <item>Propia</item>
+        <item>Subrogada</item>
+    </string-array>
+
     <string-array name="Estado">
         <item>AGUASCALIENTES</item>
         <item>B. CALIFORNIA</item>

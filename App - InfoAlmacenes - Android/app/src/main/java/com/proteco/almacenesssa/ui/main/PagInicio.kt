@@ -32,7 +32,6 @@ class PagInicio : Fragment(),AdapterView.OnItemSelectedListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
-    lateinit var recuperado:Intent
 
     //val Fragment.packageManager get() = activity?.packageManager
 
@@ -45,10 +44,12 @@ class PagInicio : Fragment(),AdapterView.OnItemSelectedListener{
                               savedInstanceState: Bundle?): View? {
         val root = inflater.inflate(R.layout.fragment_main, container, false)
         pasarEncuesta = Intent(this.context!!,Encuesta::class.java)
+
         val jsonTodos: String = this.context!!.assets.open("Todos_Almacenes.json")
             .bufferedReader().use {
             it.readText()
         }
+
         var item = JSONObject(jsonTodos).getJSONObject("CLUES")
         var item1 = JSONObject(jsonTodos).getJSONObject("CLAVE-ENTIDAD")
         var llaves = item.keys()

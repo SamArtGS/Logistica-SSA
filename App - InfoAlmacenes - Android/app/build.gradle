@@ -41,10 +41,12 @@ dependencies {
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.android.gms:play-services-location:11.8.0'
-
     implementation 'com.github.doyaaaaaken:kotlin-csv-jvm:0.7.3'
     implementation 'com.google.firebase:firebase-auth-ktx:19.3.1'
     implementation 'com.google.firebase:firebase-analytics-ktx:17.4.3'
     implementation 'com.google.firebase:firebase-database-ktx:19.3.1'
+    implementation 'com.google.firebase:firebase-core:17.0.0'
     implementation 'com.google.firebase:firebase-firestore-ktx:21.4.3'
+    implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
+    implementation 'com.google.firebase:firebase-storage-ktx:19.1.1'
 }
